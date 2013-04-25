@@ -1,3 +1,3 @@
 print "howdy"
 print "Her name is Esther"
-print "my favorite number is", 42
+print "my favorite number is", 56
