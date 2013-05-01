@@ -19,3 +19,7 @@ print " "
 print "diff A..B"
 print "Shows the code differences in Commit A and Commit B."
 print " "
+#git commit -m
+print "git commit -m"
+print "Commits a file to be logged in the staging area."
+print " "
