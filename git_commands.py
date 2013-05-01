@@ -15,3 +15,7 @@ print " "
 print "git add <filename>"
 print "This command 'tags' files that are going to be committed, the step right before committing."
 print " "
+#git diff A..B
+print "diff A..B"
+print "Shows the code differences in Commit A and Commit B."
+print " "
