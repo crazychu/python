@@ -11,3 +11,7 @@ print " "
 print "git log"
 print "The most basic and powerful tool to look back and see all the commits created."
 print " "
+#git add <filename>
+print "git add <filename>"
+print "This command 'tags' files that are going to be committed, the step right before committing."
+print " "
