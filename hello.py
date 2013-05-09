@@ -1,3 +1,11 @@
+from sys import argv	
+
+print argv
+
+
+#'unpacking the argv list values, setting them to our variables
+program_name, person_name, favorite_number, gender = argv
+
 favorite_number = 2
 person_name = "Erik"
 gender = "his"
@@ -5,15 +13,7 @@ gender = "his"
 
 #indexing begins at 0
 person = (person_name, favorite_number, gender)
-andrew = ('Andrew',6,'his')
-courtney = ('Courtney',21,'her')
 
-person = courtney
-
-
-#print person[0]
-#print person[1]
-#print person[2]
 
 
 # Wrote 3 Print Statements here
