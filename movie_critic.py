@@ -6,12 +6,13 @@ movie_stars = [('Leonardo DiCaprio', 'The Great Gatsby'),
                ('Tom Cruise', 'Oblivion'),
                ('Robert Downey Jr.', 'Iron Man 3'),
                (None, 'Star Trek Into Darkness')]
-                 
+#####################################                 
 def likes_movie():
     print "\n" 
     print "I watched {} the other day.".format(movie)
     print "This movie is awesome!"
     print "Rotten Tomatoes agrees: they gave {} a score of {} out of 100".format(movie,rating)
+    
 def dislikes_movie():
     print "\n" 
     print "I watched {} the other day.".format(movie)
@@ -22,14 +23,24 @@ def average_movie():
     print "I watched {} the other day.".format(movie)
     print "It was okay!"
     print "Rotten Tomatoes agrees: they gave {} a score of {} out of 100".format(movie,rating)    
-    
+   ########################### 
 
 
-for movie,rating in recent_movies:
-    movie = movie.upper()
+for movie, rating in recent_movies:
     if rating > 75:
         likes_movie()
-    if rating < 50:
+        for actor, movie1 in movie_stars:
+            if movie == movie1:
+                print "{} was pretty good in it, though".format(actor)
+    elif rating < 50:
         dislikes_movie()
+        for actor, movie1 in movie_stars:
+            if movie == movie1:
+                print "{} was pretty good in it, though".format(actor)
     else:
         average_movie()
+        for actor, movie1 in movie_stars:
+            if movie == movie1:
+                print "{} was pretty good in it, though".format(actor)
+     
+ 
