@@ -30,17 +30,23 @@ for movie, rating in recent_movies:
     if rating > 75:
         likes_movie()
         for actor, movie1 in movie_stars:
-            if movie == movie1:
+            if actor == None:
+                print "\n"
+            if movie == movie1 and actor != None:    
                 print "{} was pretty good in it, though".format(actor)
     elif rating < 50:
         dislikes_movie()
         for actor, movie1 in movie_stars:
-            if movie == movie1:
+            if actor == None:
+                print "\n"
+            if movie == movie1 and actor != None:    
                 print "{} was pretty good in it, though".format(actor)
     else:
         average_movie()
         for actor, movie1 in movie_stars:
-            if movie == movie1:
+            if actor == None:
+                print "\n"
+            if movie == movie1 and actor != None:    
                 print "{} was pretty good in it, though".format(actor)
-     
+
  
