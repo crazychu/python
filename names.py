@@ -38,25 +38,35 @@
 
 
 
-
+#this program has a bunch of names and print statements based on whether those people are in the office.
 people = [('andrew','in'),
-				('bobby', 'in'),
-				('judy', 'out'),
-				('esther', 'in'),
-				('vince','in')]
+			('bobby', 'out'),
+			('judy', 'out'),
+			('esther', 'in'),
+			('vince','in')]
 
 #declaring a function
 #upper is a method in a string that turns the text UPPER CASE
-def gets_reward():
-    print"{} is in the office.".format(person)
-    print"{} gets a bagel!".format(person)
-    print"{} gets to have so much cream cheese".format(person)
+def gets_reward(person_who_is_in, catchphrase):
+    print"{} is in the office:{}".format(person_who_is_in, catchphrase)
+    print"{} gets a bagel!".format(person_who_is_in, catchphrase)
+    print"{} gets to have so much cream cheese".format(person_who_is_in, catchphrase)
 #if the person is in the office, they get a bagel
-for person, status in people:
-    person = person.upper()
-    if status == 'in':
-        gets_reward()
-    else:
-        print"{} is not in the office.".format(person)
-        print "{} gets more emails...".format(person)
-        print "{} gets NO cream cheese.".format(person) 
+def gets_punished(bad_person):
+    print"{} is not in the office.".format(bad_person)
+    print "{} gets more emails...".format(bad_person)
+    print "{} gets NO cream cheese.".format(bad_person) 
+def person_is_in_the_office():
+    """ return True is the person's status is 'in'
+    """ 
+    return status == 'in'
+
+def take_attendance():
+    cheer = 'whoopee'
+    for person, status in people:
+        person = person.upper()
+        if person_is_in_the_office(): #error here
+            gets_reward(person, cheer)
+        else:
+            gets_punished(bad_person) 
+take_attendance()           
