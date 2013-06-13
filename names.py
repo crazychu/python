@@ -40,11 +40,51 @@
 
 #this program has a bunch of names and print statements based on whether those people are in the office.
 people = [('andrew','in'),
-			('bobby', 'out'),
-			('judy', 'out'),
-			('esther', 'in'),
-			('vince','in')]
+			('Bobby', 'out'),
+			('Judy', 'out'),
+			('Esther', 'in'),
+			('Vince','in')]
 
+#dictionary
+
+
+
+roll_call = [
+    { 
+        'name':'Andrew',
+        'status':'in'
+    },
+    
+    {
+        'name':'Bobby',
+        'status':'out',
+        'favorite_food':'burrito'
+    },
+    
+    {
+        'name':'Judy',
+        'status':'out'
+    },
+    
+    {
+        'name':'Esther',
+        'status':'in'
+    },
+        
+    {
+        'name':'Vince',
+        'status':'out'
+    },
+]
+        
+for person_dict in roll_call:
+    for key, value in person_dict.items():
+        if key not in ['name','status']:
+            del person_dict[key]
+    print person_dict.items()
+    
+    
+    
 #declaring a function
 #upper is a method in a string that turns the text UPPER CASE
 def gets_reward(person_who_is_in, catchphrase):
@@ -64,9 +104,9 @@ def person_is_in_the_office():
 def take_attendance():
     cheer = 'whoopee'
     for person, status in people:
-        person = person.upper()
-        if person_is_in_the_office(): #error here
+        
+        if person_is_in_the_office(status):
             gets_reward(person, cheer)
         else:
             gets_punished(bad_person) 
-take_attendance()           
+            
